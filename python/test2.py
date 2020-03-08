@@ -1,4 +1,4 @@
-ssh.connect("124.160.108.60",60000,"root", "dahuafire")
+ssh.connect("*.*.*.*",*,"*", "*")
 if __name__ == '__main__':
 
     for host in host_lists:
