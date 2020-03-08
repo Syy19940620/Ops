@@ -4,20 +4,19 @@
 import paramiko
 import time
 
-lists=[["****", "*", "***", "****"]]
+lists = [["124.160.108.60", 60000, "root", "dahuafire"]]
 
 """
 连接服务器方法
 """
 
 
-def ssh_client(host,port,username,passwd):
-
-    ssh=paramiko.SSHClient()
+def ssh_client(host, port, username, passwd):
+    ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect(host, port, username, passwd)
     string = "ps -aux|grep java|grep -v grep|awk '{print \"pid:\", $2, \"cpu:\", $3, \"mem:\", $4}'"
-    stdin, stdout, stderr=ssh.exec_command(string)
+    stdin, stdout, stderr = ssh.exec_command(string)
 
     i = 0
     counts = stdout.readlines()
