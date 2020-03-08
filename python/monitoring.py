@@ -4,7 +4,7 @@
 import paramiko
 import time
 
-lists = [["124.160.108.60", 60000, "root", "dahuafire"]]
+lists = [["1111", 1, "111111", "11111"]]
 
 """
 连接服务器方法
